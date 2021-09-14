@@ -29,7 +29,7 @@ namespace SpecProj.Steps
         {
             var acutla = p0 * p1;
 
-            Assert.AreEqual(acutla+1, p2);
+            Assert.AreEqual(acutla, p2);
         }
 
     }
