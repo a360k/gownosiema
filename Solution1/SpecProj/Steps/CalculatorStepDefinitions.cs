@@ -24,5 +24,13 @@ namespace SpecProj.Steps
             Assert.AreEqual(expected, p1);
         }
 
+        [Given(@"'(.*)' multiplied by '(.*)' number is '(.*)'")]
+        public void GivenMultipliedByNumberIs(int p0, int p1, int p2)
+        {
+            var acutla = p0 * p1;
+
+            Assert.AreEqual(acutla, p2);
+        }
+
     }
 }
