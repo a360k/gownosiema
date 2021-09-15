@@ -10,10 +10,6 @@ Scenario Outline: Add two numbers
 	| 5 | 55 |
 	| 5 | 55 |
 	| 5 | 55 |
-	| 5 | 55 |
-	| 5 | 55 |
-	| 5 | 55 |
-	| 5 | 55 |
 
 @mytag
 Scenario Outline: Multiple two numbers
@@ -25,3 +21,14 @@ Scenario Outline: Multiple two numbers
 	| 3| 15 |45   |
 	| 5 | 10 | 50  |
 	| 2 | 4 |  8 |
+
+@mytag
+Scenario Outline: Add two numbers 2
+	Given the first '<a>' number is '<b>'
+
+	Examples: 
+	| a | b  |
+	| 5 | 55 |
+	| 5 | 55 |
+	| 5 | 55 |
+	| 5 | 55 |

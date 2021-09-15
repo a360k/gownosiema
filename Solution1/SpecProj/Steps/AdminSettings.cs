@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using TechTalk.SpecFlow;
 
 namespace SpecProj.Steps
@@ -38,6 +39,7 @@ namespace SpecProj.Steps
         [Then(@"'(.*)' settings are available")]
         public void ThenSettingsAreAvailable(string p0)
         {
+            Thread.Sleep(700);
             Assert.AreEqual(5, 5);
         }
 

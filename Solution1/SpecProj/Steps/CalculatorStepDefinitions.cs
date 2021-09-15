@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using System.Threading;
 using TechTalk.SpecFlow;
 
 namespace SpecProj.Steps
@@ -20,7 +21,7 @@ namespace SpecProj.Steps
         public void GivenTheFirstNumberIs(int p0, int p1)
         {
             var expected = p0 + 50;
-
+            Thread.Sleep(700);
             Assert.AreEqual(expected, p1);
         }
 
@@ -28,6 +29,7 @@ namespace SpecProj.Steps
         public void GivenMultipliedByNumberIs(int p0, int p1, int p2)
         {
             var acutla = p0 * p1;
+            Thread.Sleep(700);
 
             Assert.AreEqual(acutla, p2);
         }
