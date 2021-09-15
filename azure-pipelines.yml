@@ -8,6 +8,7 @@ steps:
     inputs:
       command: 'test'
       projects: '**\SpecProj.csproj'
+      arguments: '-v n'
   
   - task: SpecFlowPlus@0
     inputs:
