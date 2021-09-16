@@ -16,6 +16,7 @@ steps:
       projects: '**\SpecProj.csproj'
       arguments: '--no-build -v m --filter TestCategory=first'
     displayName: 'test 1'
+    continueOnError: true
 
   - task: DotNetCoreCLI@2
     inputs:
@@ -23,6 +24,7 @@ steps:
       projects: '**\SpecProj.csproj'
       arguments: '--no-build -v m --filter TestCategory=second'
     displayName: 'test 2'
+    continueOnError: true
         
   - task: DotNetCoreCLI@2
     inputs:
@@ -30,6 +32,7 @@ steps:
       projects: '**\SpecProj.csproj'
       arguments: '--no-build -v m --filter TestCategory=third'
     displayName: 'test 3'
+    continueOnError: true
   - task: SpecFlowPlus@0
     inputs:
       generatorSource: 'TestAssembly'
