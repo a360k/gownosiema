@@ -20,7 +20,7 @@ Scenario Outline: Multiple two numbers
 	| 5 | 3 |  15 |
 	| 3| 15 |45   |
 	| 5 | 10 | 50  |
-	| 2 | 4 |  8 |
+	| 2 | 4 |  1 |
 
 @first
 Scenario Outline: Add two numbers 2
