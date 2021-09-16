@@ -2,7 +2,7 @@
 	Simple calculator for adding two numbers
 
 
-@mytag
+@third
 Scenario Outline: Add two numbers 32
 	Given the first '<a>' number is '<b>'
 
@@ -14,7 +14,7 @@ Scenario Outline: Add two numbers 32
 	| 5 | 55 |
 
 	
-@mytag
+@third
 Scenario Outline: Add two numbers 66
 	Given the first '<a>' number is '<b>'
 

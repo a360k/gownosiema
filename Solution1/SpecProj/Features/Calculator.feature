@@ -1,6 +1,6 @@
 ﻿Feature: Calculator
 
-@mytag
+@first
 Scenario Outline: Add two numbers
 	Given the first '<a>' number is '<b>'
 
@@ -11,7 +11,7 @@ Scenario Outline: Add two numbers
 	| 5 | 55 |
 	| 5 | 55 |
 
-@mytag
+@first
 Scenario Outline: Multiple two numbers
 	Given '<a>' multiplied by '<b>' number is '<c>'
 
@@ -22,7 +22,7 @@ Scenario Outline: Multiple two numbers
 	| 5 | 10 | 50  |
 	| 2 | 4 |  8 |
 
-@mytag
+@first
 Scenario Outline: Add two numbers 2
 	Given the first '<a>' number is '<b>'
 
