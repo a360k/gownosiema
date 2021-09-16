@@ -38,7 +38,7 @@ steps:
       generatorSource: 'TestAssembly'
       testAssemblyFilePath: '..\..\2\s\Solution1\SpecProj\bin\Debug\netcoreapp3.1\SpecProj.dll'
       projectName: 'asd'
-      testExecutionJson: '..\..\2\s\Solution1\SpecProj\bin\Debug\netcoreapp3.1\TestExecution.json'
+      testExecutionJson: '..\..\2\s\Solution1\SpecProj\bin\Debug\netcoreapp3.1\TestExecution*.json'
     enabled: true
     continueOnError: true
     condition: always()
