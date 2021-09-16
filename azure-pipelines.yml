@@ -6,21 +6,30 @@ pool: Default
 steps:
   - task: DotNetCoreCLI@2
     inputs:
-      command: 'test'
+      command: 'build'
       projects: '**\SpecProj.csproj'
-      arguments: '-v n --filter TestCategory=first'
+    displayName: 'build'
 
   - task: DotNetCoreCLI@2
     inputs:
       command: 'test'
       projects: '**\SpecProj.csproj'
-      arguments: '-v n --filter TestCategory=second'
+      arguments: '--no-build -v n --filter TestCategory=first'
+    displayName: 'test 1'
+
+  - task: DotNetCoreCLI@2
+    inputs:
+      command: 'test'
+      projects: '**\SpecProj.csproj'
+      arguments: '--no-build -v n --filter TestCategory=second'
+    displayName: 'test 2'
         
   - task: DotNetCoreCLI@2
     inputs:
       command: 'test'
       projects: '**\SpecProj.csproj'
-      arguments: '-v n --filter TestCategory=third'
+      arguments: '--no-build -v n --filter TestCategory=third'
+    displayName: 'test 3'
   - task: SpecFlowPlus@0
     inputs:
       generatorSource: 'TestAssembly'
