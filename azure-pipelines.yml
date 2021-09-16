@@ -8,8 +8,19 @@ steps:
     inputs:
       command: 'test'
       projects: '**\SpecProj.csproj'
-      arguments: '-v n'
-  
+      arguments: '-v n --filter TestCategory=first'
+
+  - task: DotNetCoreCLI@2
+    inputs:
+      command: 'test'
+      projects: '**\SpecProj.csproj'
+      arguments: '-v n --filter TestCategory=second'
+        
+  - task: DotNetCoreCLI@2
+    inputs:
+      command: 'test'
+      projects: '**\SpecProj.csproj'
+      arguments: '-v n --filter TestCategory=third'
   - task: SpecFlowPlus@0
     inputs:
       generatorSource: 'TestAssembly'
