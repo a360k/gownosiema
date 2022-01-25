@@ -2,9 +2,21 @@ trigger: none
 
 pool: Default
 
+parameters:
+- name: category
+  type: string
+  default: 'second'
+
 variables:
-- name: one
-  value: second 
+- name: defaultNumber
+  value: 'second' 
+- name: zmienna
+  ${{ if eq(parameters.category, $(defaultNumber)) }}:
+    value: 'second'
+  ${{ else }}:
+    value: ${{ parameters.category }}
+
+
 
 resources:
   pipelines:
@@ -23,7 +35,7 @@ steps:
     inputs:
       command: 'test'
       projects: '**\SpecProj.csproj'
-      arguments: '--no-build -v m --filter TestCategory=${{ variables.one }}'
+      arguments: '--no-build -v m --filter TestCategory=$(zmienna)'
     displayName: 'test 2'
     continueOnError: true
     
