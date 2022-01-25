@@ -2,6 +2,10 @@ trigger: none
 
 pool: Default
 
+variables:
+- name: one
+  value: second 
+
 resources:
   pipelines:
   - pipeline: something
@@ -19,7 +23,7 @@ steps:
     inputs:
       command: 'test'
       projects: '**\SpecProj.csproj'
-      arguments: '--no-build -v m --filter TestCategory=second'
+      arguments: '--no-build -v m --filter TestCategory=${{ variables.one }}'
     displayName: 'test 2'
     continueOnError: true
     
