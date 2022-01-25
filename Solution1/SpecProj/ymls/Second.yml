@@ -5,10 +5,10 @@ pool: Default
 resources:
   pipelines:
   - pipeline: something
-    source: 'superDuper'
+    source: 'michelle pfeiffer'
     trigger:
         branches:
-          - '*'
+          - 'adrian_nowak_superjest'
 
 steps:
   - task: DotNetCoreCLI@2
