@@ -3,35 +3,34 @@ trigger: none
 pool: Default
 
 parameters:
-- name: category
-  type: string
-  default: 'second'
+  - name: category
+    type: string
+    default: "second"
 
 variables:
-- name: defaultNumber
-  value: 'second' 
-- name: zmienna
-  ${{ if not(eq(parameters.category, '$(defaultNumber)')) }}:
-    value: ${{ parameters.category }}
+  - name: defaultNumber
+    value: "second"
+  - name: zmienna
+    ${{ if not(eq(parameters.category, '$(defaultNumber)')) }}:
+      value: ${{ parameters.category }}
 
 resources:
   pipelines:
-  - pipeline: something
-    source: 'michelle pfeiffer'
-    trigger: true
+    - pipeline: something
+      source: "michelle pfeiffer"
+      trigger: true
 
 steps:
   - task: DotNetCoreCLI@2
     inputs:
-      command: 'build'
+      command: "build"
       projects: '**\SpecProj.csproj'
-    displayName: 'build'
+    displayName: "build"
 
   - task: DotNetCoreCLI@2
     inputs:
-      command: 'test'
+      command: "test"
       projects: '**\SpecProj.csproj'
-      arguments: '--no-build -v m --filter TestCategory=$(zmienna)'
-    displayName: 'test 2'
+      arguments: "--no-build -v m --filter TestCategory=$(zmienna)"
+    displayName: "test 2"
     continueOnError: true
-    

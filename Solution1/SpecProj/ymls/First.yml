@@ -5,15 +5,14 @@ pool: Default
 steps:
   - task: DotNetCoreCLI@2
     inputs:
-      command: 'build'
+      command: "build"
       projects: '**\SpecProj.csproj'
-    displayName: 'build'
+    displayName: "build"
 
   - task: DotNetCoreCLI@2
     inputs:
-      command: 'test'
+      command: "test"
       projects: '**\SpecProj.csproj'
-      arguments: '--no-build -v m --filter TestCategory=first'
-    displayName: 'test 1'
+      arguments: "--no-build -v m --filter TestCategory=first"
+    displayName: "test 1"
     continueOnError: true
-    
