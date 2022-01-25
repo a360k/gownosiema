@@ -5,8 +5,10 @@ pool: Default
 resources:
   pipelines:
   - pipeline: something
-    source: First
-    trigger: true
+    source: 'First'
+    trigger:
+        branches:
+          - '*'
 
 steps:
   - task: DotNetCoreCLI@2
