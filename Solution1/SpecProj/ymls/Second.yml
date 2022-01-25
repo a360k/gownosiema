@@ -11,12 +11,8 @@ variables:
 - name: defaultNumber
   value: 'second' 
 - name: zmienna
-  ${{ if eq(parameters.category, '$(defaultNumber)') }}:
-    value: 'second'
-  ${{ else }}:
+  ${{ if not(eq(parameters.category, '$(defaultNumber)')) }}:
     value: ${{ parameters.category }}
-
-
 
 resources:
   pipelines:
