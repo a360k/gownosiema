@@ -8,6 +8,7 @@ resources:
     source: 'michelle pfeiffer'
     trigger:
         branches:
+          include:
           - 'staszek_nowakowski_tomek'
 
 steps:
