@@ -2,6 +2,12 @@
 
 pool: Default
 
+resources:
+  pipelines:
+  - pipeline: someId
+    source: First
+    trigger: true
+
 steps:
   - task: DotNetCoreCLI@2
     inputs:
