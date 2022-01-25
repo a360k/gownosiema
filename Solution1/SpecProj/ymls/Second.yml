@@ -13,7 +13,7 @@ variables:
 - name: zmienna
   ${{ if not(eq(parameters.category, '$(defaultNumber)')) }}:
     value: ${{ parameters.category }}
-- group: 'Secrets_${{ parameters.category }}'
+- group: 'SecretyLola_${{ parameters.category }}'
 
 resources:
   pipelines:
