@@ -1,0 +1,19 @@
+﻿trigger: none
+
+pool: Default
+
+steps:
+  - task: DotNetCoreCLI@2
+    inputs:
+      command: 'build'
+      projects: '**\SpecProj.csproj'
+    displayName: 'build'
+
+  - task: DotNetCoreCLI@2
+    inputs:
+      command: 'test'
+      projects: '**\SpecProj.csproj'
+      arguments: '--no-build -v m --filter TestCategory=second'
+    displayName: 'test 2'
+    continueOnError: true
+    
