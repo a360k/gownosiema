@@ -13,6 +13,7 @@ variables:
 - name: zmienna
   ${{ if not(eq(parameters.category, '$(defaultNumber)')) }}:
     value: ${{ parameters.category }}
+- group: 'Secrets_${{ parameters.category }}'
 
 resources:
   pipelines:
@@ -31,7 +32,7 @@ steps:
     inputs:
       command: 'test'
       projects: '**\SpecProj.csproj'
-      arguments: '--no-build -v m --filter TestCategory=$(someShit)'
+      arguments: '--no-build -v m --filter TestCategory=${{ variables.SuperSekret }}'
     displayName: 'test 2'
     continueOnError: true
     

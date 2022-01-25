@@ -32,3 +32,39 @@ Scenario Outline: Add two numbers 2
 	| 5 | 55 |
 	| 5 | 55 |
 	| 5 | 55 |
+
+
+@first
+Scenario Outline: Add two numbers 233
+	Given the first '<a>' number is '<b>'
+
+	Examples: 
+	| a | b  |
+	| 5 | 55 |
+	| 5 | 55 |
+	| 5 | 55 |
+	| 5 | 55 |
+
+
+@first
+Scenario Outline: Add two numbers 244
+	Given the first '<a>' number is '<b>'
+
+	Examples: 
+	| a | b  |
+	| 5 | 55 |
+	| 5 | 55 |
+	| 5 | 55 |
+	| 5 | 55 |
+
+
+@first
+Scenario Outline: Add two numbers 255
+	Given the first '<a>' number is '<b>'
+
+	Examples: 
+	| a | b  |
+	| 5 | 55 |
+	| 5 | 55 |
+	| 5 | 55 |
+	| 5 | 55 |
