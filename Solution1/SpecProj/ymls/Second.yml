@@ -4,8 +4,8 @@ pool: Default
 
 resources:
   pipelines:
-  - pipeline: someId
-    source: First
+  - pipeline: firstPipeline
+    source: 'First'
     trigger: true
 
 steps:
