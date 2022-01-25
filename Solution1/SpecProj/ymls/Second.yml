@@ -6,10 +6,7 @@ resources:
   pipelines:
   - pipeline: something
     source: 'michelle pfeiffer'
-    trigger:
-        branches:
-          include:
-          - 'staszek_nowakowski_tomek'
+    trigger: true
 
 steps:
   - task: DotNetCoreCLI@2
