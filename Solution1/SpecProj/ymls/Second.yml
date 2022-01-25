@@ -8,7 +8,7 @@ resources:
     source: 'michelle pfeiffer'
     trigger:
         branches:
-          - 'adrian_nowak_superjest'
+          - 'staszek_nowakowski_tomek'
 
 steps:
   - task: DotNetCoreCLI@2
