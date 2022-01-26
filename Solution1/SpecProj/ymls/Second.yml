@@ -1,4 +1,4 @@
-name: "Something $(zmienna)"
+name: "$(Date:yyyyMMdd)$(Rev:.r) - WS Lightweight ${{parameters.category}}"
 
 trigger: none
 
