@@ -1,4 +1,4 @@
-name: "Something xD"
+name: "Something $(zmienna)"
 
 trigger: none
 
