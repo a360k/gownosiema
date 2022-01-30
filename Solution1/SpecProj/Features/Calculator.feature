@@ -17,10 +17,10 @@ Scenario Outline: Multiple two numbers
 
 	Examples: 
 	| a | b  | c |
-	| 5 | 3 |  15 |
+	| 5 | 3 |  16 |
 	| 3| 15 |45   |
 	| 5 | 10 | 50  |
-	| 2 | 4 |  8 |
+	| 2 | 4 |  9 |
 
 @first
 Scenario Outline: Add two numbers 2
