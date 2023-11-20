@@ -7,10 +7,15 @@ steps:
 - task: DownloadSecureFile@1
   name: caCertificate
   inputs:
-    secureFile: 'kakel.txt'
+    secureFile: 'certix.pfx'
     retryCount: '3'
 
 - task: PowerShell@2
   inputs:
     targetType: 'inline'
-    script: 'cat $(caCertificate.secureFilePath)'
+    script: 'Import-PfxCertificate -FilePath $(caCertificate.secureFilePath) -CertStoreLocation Cert:\LocalMachine\My'
+
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: 'Import-PfxCertificate -FilePath $(caCertificate.secureFilePath) -CertStoreLocation Cert:\LocalMachine\Root'
